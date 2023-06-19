@@ -78,8 +78,6 @@ list=[]
 dict={'subject':'unknown','credit':0,'grade':0}
 Ask=input("Add for subject?(Yes/No):")
 while(Ask=="Yes"):
-    
-    
     subject=input("select your subject")
     credit=int(input('Your credict:'))
     grade=int(input('your grade:'))
