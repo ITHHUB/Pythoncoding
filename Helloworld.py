@@ -128,3 +128,29 @@
 #     print("Subject",Dict['subject'])
 #     print("Grade",Dict['grade'])
 #     Change=input("Do you want to change your grade?(Yes/No):")
+
+
+bookings=[]
+Mode=input("Enter mode(q-quit,b-booking,c-cancel,p-print booking):")
+
+while(Mode!="q"):
+ if(Mode=="b"):
+    Name=input("Your name:")
+    checkin=int(input("Enter checkin day:"))
+    checkout=int(input("Enter checkout day:"))
+    roomtype=input("Select your type:")
+    BookingNumber=checkin*checkout
+    booking={"Name":Name,"check in":checkin,"check out":checkout,"roomtype":roomtype,"BookingNumber":BookingNumber}
+    bookings.append(booking)
+    Choice=input("Do you want to booking more?(Yes/No):")    
+    print(bookings)
+    print("Booking success")
+ elif(Mode=="c"):
+    BookingNumbers=int(input("Your book number:"))
+    for booking in bookings:
+       if booking['BookingNumber']==BookingNumbers:
+          bookings.remove(booking)
+ elif(Mode=="p"):
+    print(bookings)
+
+ Mode=input("Enter mode(q-quit,b-booking,c-cancel,p-print booking):")
