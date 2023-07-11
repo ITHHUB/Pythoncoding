@@ -190,42 +190,181 @@
 
 
 
-income = int(input("Your income :"))
-salary = income * 12
-tax = 0
-tax1 = 0
-tax2 = 0
-tax3 = 0
-tax4 = 0
-tax5 = 0
-tax6 = 0
-tax7 = 0
-tax8 = 0
-if(income <= 150000):
-    tax1 = 0
-elif(income <= 300000):
+# income = int(input("Your annual income :"))
+# salary = income
+
+# tax1 = 0
+# tax2 = 7500
+# tax3 = 20000
+# tax4 = 37500
+# tax5 = 50000
+# tax6 = 250000
+# tax7 = 900000
+
+# if(salary <= 150000):
+#     totaltax = tax1
+# elif(salary <= 300000):
     
-    x1 = income - 150000 
+#     x1 = salary - 150000 
    
-    tax2 = x1 * 5 / 100
-elif(income<=500000):
-    x2 = income - 300000
-    tax3 = x2*10 / 100
-elif(income<=750000):
-    x3 = income - 500000
-    tax4 = x3*15 / 100
-elif(income<=1000000):
-    x4 = income - 750000
-    tax5 = x4*20 / 100
-elif(income<=2000000):
-    x5 = income - 1000000
-    tax6 = x5*25 / 100
-elif(income<=5000000):
-    x6 = income - 2000000
-    tax7 = x6*30 / 100
-elif(income>500000):
-    x7 = income - 5000000
-    tax8 = x7*35 / 100
+#     totaltax = (x1*0.05)+tax1
+# elif(salary<=500000):
+#     x2 = salary - 300000
+#     totaltax = (x2*0.10)+tax2+tax1
+# elif(salary<=750000):
+#     x3 = salary - 500000
+#     totaltax = (x3*0.15)+tax3+tax2+tax1
+# elif(salary<=1000000):
+#     x4 = salary - 750000
+#     totaltax = (x4*0.20)+tax4+tax3+tax2+tax1
+# elif(salary<=2000000):
+#     x5 = salary - 1000000
+#     totaltax = (x5*0.25)+tax5+tax4+tax3+tax2+tax1
+# elif(salary<=5000000):
+#     x6 = salary - 2000000
+#     totaltax = (x6*0.30)+tax6+tax5+tax4+tax3+tax2+tax1
+# elif(salary>500000):
+#     x7 = salary - 5000000
+#     totaltax = (x7*0.35)+tax7+tax6+tax5+tax4+tax3+tax2+tax1
 
 
-print("Total tax to pay is", tax+tax1+tax2+tax3+tax4+tax5+tax6+tax7+tax8)
+# print("Total tax to pay is",totaltax)
+
+
+# size=int(input("input number:"))
+# for i in range(size):
+#  for j in range(size-i):
+#   print("*",end='')
+#  print()
+
+# income = int(input("Your annual income :"))
+# salary = income
+# def calculatesalary(salary):
+    
+#     tax1 = 0
+#     tax2 = 7500
+#     tax3 = 20000
+#     tax4 = 37500
+#     tax5 = 50000
+#     tax6 = 250000
+#     tax7 = 900000
+
+#     if(salary <= 150000):
+#         totaltax = tax1
+#     elif(salary <= 300000):
+    
+#         x1 = salary - 150000 
+   
+#         totaltax = (x1*0.05)+tax1
+#     elif(salary<=500000):
+#         x2 = salary - 300000
+#         totaltax = (x2*0.10)+tax2+tax1
+#     elif(salary<=750000):
+#         x3 = salary - 500000
+#         totaltax = (x3*0.15)+tax3+tax2+tax1
+#     elif(salary<=1000000):
+#         x4 = salary - 750000
+#         totaltax = (x4*0.20)+tax4+tax3+tax2+tax1
+#     elif(salary<=2000000):
+#         x5 = salary - 1000000
+#         totaltax = (x5*0.25)+tax5+tax4+tax3+tax2+tax1
+#     elif(salary<=5000000):
+#         x6 = salary - 2000000
+#         totaltax = (x6*0.30)+tax6+tax5+tax4+tax3+tax2+tax1
+#     else:
+#         x7 = salary - 5000000
+#         totaltax = (x7*0.35)+tax7+tax6+tax5+tax4+tax3+tax2+tax1
+
+#     return totaltax
+# totaltax=calculatesalary(income)
+# print("Total tax to pay is",totaltax)
+
+# a=int(input("Enter value  a:"))
+# b=int(input("Enter value  b:"))
+# def summary(a,b):
+#     sum=a+b
+#     sub=a-b
+#     muti=a*b
+#     print("Sum is",sum)
+#     print("Sub is",sub)
+#     print("Mutipy is",muti)
+# summary(a,b)
+
+
+
+# school=int(input("Enter the number:"))
+# def student(school):
+#     present=[1,2,3,4,5,6,7,8,9,10]
+#     if(school in present):
+#         print("present")
+#     else:
+#         print("absent")
+# student(school)
+
+
+# a=int(input("Enter value:"))
+# b=int(input("Enter value:"))
+# c=int(input("Enter value:"))
+
+
+# def max(a, b, c):
+
+    
+#     if a > b and a > c:
+#         print( a,"is maximum among all")
+#     elif b > a and b > c:
+#         print(b,"is maximum among all")
+#     else:
+#         print(c,"is maximum among all")
+# max(a,b,c)
+
+
+
+# Num=int(input("Enter the number:"))
+# def Even_odd(Num):
+#     if(Num%2==0):
+#         print("even")
+#     else:
+#         print("odd")
+# Even_odd(Num)
+
+
+
+# K=input("input an alphabet:")
+# def Vowel_consonant(K):
+#     vowel=0
+#     con=0
+#     for i in range(len(K)):
+#         if(K[i] in ["A","E","I","O","U","a","e","i","o","u"]):
+#            vowel=vowel+1
+
+            
+#         else:
+#             con=con+1
+#     print("Count of consonant",con)
+#     print("Count of vowel",vowel)
+# Vowel_consonant(K)
+
+# Num=int(input("Enter your number:"))
+
+# factorial=1
+# while (Num!=0):
+#     factorial=factorial*Num
+#     Num=Num-1
+# print(factorial)
+
+
+
+
+
+
+import datetime
+month=(input("Input your month:"))
+year=int(input("Input your year:"))
+def friday13(month, year):
+    
+    date = datetime(year, month, 13)
+
+    
+    return datetime() == 4
+print(friday13(month,year))
