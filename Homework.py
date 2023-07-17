@@ -28,8 +28,27 @@
 
 import os
 from datetime import datetime, timezone, timedelta
+from pathlib import Path
 
+# Specify the directory path
+path = Path(r'D:/IthXD')
+file_name = 'Date_CA.txt'
+abs_file_path = os.path.join(path, file_name)
 
+def read_file(file_name,TH_time,CA_time):
+   
+    if(os.path.exists(file_name) != True):
+      with open(file_name, 'a') as fp:
+        # uncomment below line if you want to create an empty file
+       fp.write("\nConvert time from Thailand to Canada :")
+       fp.write("\nInput:")
+       THdate_time = TH_time.strftime("%m/%d/%Y, %H:%M:%S")
+       CAdate_time = CA_time.strftime("%m/%d/%Y, %H:%M:%S")
+       Line1=["\nTH_time:",THdate_time]
+       fp.writelines(Line1) 
+       Line2=["\nCA_time:",CAdate_time]
+       fp.writelines(Line2)
+       fp.close()
 
 TH_dateTime = datetime.now(timezone(timedelta(hours=+7), 'MST'))
 print("In TH::", TH_dateTime)
@@ -37,29 +56,8 @@ print("In TH::", TH_dateTime)
 
 CA_dateTime = datetime.now(timezone(timedelta(hours=-7), 'MST'))
 print("In CA::", CA_dateTime)
-def read_file(file_name):
-    file_handle = open(file_name,'w')
-   
-    file_handle.write("Convert time from Thailand to Canada :")
-    file_handle.write("Input:")
-    file_handle.close()
-    
-file_dir = os.path.dirname(os.path.realpath('D:/IthXD'))
-print (file_dir)
 
-
-file_name = "Time.txt"
-read_file(file_name)
-
-
-file_name = os.path.join(file_dir, file_name)
-read_file(file_name)
-
-
-file_name = os.path.join(file_dir, file_name)
-file_name = os.path.abspath(os.path.realpath(file_name))
-print (file_name)
-read_file(file_name)
+read_file(file_name,TH_dateTime,CA_dateTime)
 
 
 
